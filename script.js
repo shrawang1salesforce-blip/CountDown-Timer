@@ -1,6 +1,5 @@
 const dateInput = document.querySelector("#target-date");
 const setDateButton = document.querySelector("#set-date");
-const statusText = document.querySelector("#status-text");
 const targetLabel = document.querySelector("#target-label");
 const helperText = document.querySelector("#helper-text");
 const timeValues = {
@@ -57,12 +56,10 @@ function updateClock() {
 
   if (remaining === 0) {
     document.body.classList.add("finished");
-    statusText.textContent = "The moment is here";
     helperText.textContent = "Choose another date whenever you are ready.";
     clearInterval(intervalId);
   } else {
     document.body.classList.remove("finished");
-    statusText.textContent = "Counting down";
     helperText.textContent = "The timer updates every second.";
   }
 }

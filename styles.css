@@ -38,20 +38,6 @@ body {
   align-self: center;
 }
 
-.eyebrow {
-  margin: 0 0 25px;
-  color: var(--accent);
-  font: 500 12px/1 var(--mono);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.eyebrow::before {
-  content: "↳";
-  margin-right: 9px;
-  font-size: 15px;
-}
-
 h1 {
   max-width: 440px;
   margin: 0;
@@ -84,12 +70,9 @@ h1 em {
 
 .panel-topline {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  gap: 9px;
-  color: var(--muted);
-  font: 500 11px var(--mono);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  min-height: 14px;
 }
 
 .target-label {
@@ -98,14 +81,6 @@ h1 em {
   color: var(--ink);
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(232, 116, 79, 0.17);
 }
 
 .countdown {
@@ -140,14 +115,6 @@ h1 em {
 .panel-footer {
   padding-top: 24px;
   border-top: 1px solid var(--line);
-}
-
-.panel-footer label {
-  display: block;
-  margin-bottom: 13px;
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 700;
 }
 
 .date-row {
@@ -205,11 +172,6 @@ footer {
   font: 11px var(--mono);
 }
 
-.finished .status-dot {
-  background: var(--ink);
-  box-shadow: 0 0 0 4px rgba(32, 37, 34, 0.12);
-}
-
 .finished .timer-panel {
   background: #e9e2d5;
 }
@@ -259,10 +221,6 @@ footer {
 @media (max-width: 430px) {
   .timer-panel {
     padding: 23px 18px;
-  }
-
-  .panel-topline {
-    font-size: 9px;
   }
 
   .target-label {
